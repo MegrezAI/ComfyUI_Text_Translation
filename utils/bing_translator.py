@@ -7,8 +7,11 @@ import os
 from azure.ai.translation.text import TextTranslationClient
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.translation.text.models import InputTextItem
+from dotenv import load_dotenv
+
 from azure.core.exceptions import HttpResponseError
 
+load_dotenv()
 # Read Azure translation service configuration from environment variables
 AZURE_TRANSLATOR_CONFIG = {
     'api_key': os.getenv('AZURE_TRANSLATOR_API_KEY', ''),
